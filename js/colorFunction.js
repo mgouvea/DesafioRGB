@@ -21,8 +21,22 @@ function rangeValueChange() {
 }
 
 function rgb() {
+  let redLetter = 0;
+  let greenLetter = 0;
+  let blueLetter = 0;
+
+  rgbRedLetters = `${inputRed.value},${greenLetter},${blueLetter}`;
+  rgbGreenLetters = `${redLetter},${inputGreen.value},${blueLetter}`;
+  rgbBlueLetters = `${redLetter},${greenLetter},${inputBlue.value}`;
+
   let RGBox = `${inputRed.value},${inputGreen.value},${inputBlue.value}`;
   document.querySelector('#RGBox').style.backgroundColor = 'rgb(' + RGBox + ')';
+
+  document.querySelector('#letterRed').style.color = `rgb(${rgbRedLetters})`;
+  document.querySelector(
+    '#letterGreen'
+  ).style.color = `rgb(${rgbGreenLetters})`;
+  document.querySelector('#letterBlue').style.color = `rgb(${rgbBlueLetters})`;
 }
 
 function footerLetters() {
